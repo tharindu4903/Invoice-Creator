@@ -4,9 +4,9 @@
   "description": "invoice genarator",
   "main": "index.js",
   "scripts": {
-    "dev":"concurrently \"npm run server\" \"npm run client\"",
-    "client":"npm start --prefix client",
-    "server":"nodemon server"
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "client": "npm start --prefix client",
+    "server": "nodemon server"
   },
   "repository": {
     "type": "git",
@@ -28,6 +28,7 @@
     "cookie-parser": "^1.4.5",
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "html-pdf": "^2.2.0"
+    "html-pdf": "^2.2.0",
+    "phantomjs": "^2.1.7"
   }
 }

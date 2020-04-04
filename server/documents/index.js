@@ -1,5 +1,5 @@
 
-module.exports = ({ name, price1, price2, receiptId }) => {
+module.exports = ({ invoiceNo,customerName ,des1 ,qty1 ,pr1 ,des2 ,qty2 ,pr2 ,des3 ,qty3 ,pr3 ,des4 ,qty4 ,pr4 ,des5 ,qty5 ,pr5 ,des6 ,qty6 ,pr6 ,}) => {
     const today = new Date();
 return `
 <!doctype html>
