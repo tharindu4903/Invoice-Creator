@@ -8,11 +8,11 @@ import { saveAs } from 'file-saver';
 
 class App extends Component { 
    state = {
-  invoiceNo :1000000,
-  customerName : "unknown",
-  des1 :'',
-  qty1 :0,
-  pr1 :0,
+  invoiceNo :1000001,
+  customerName :'Tharindu',
+  des1 :'hello world',
+  qty1 :10,
+  pr1 :100,
   des2 :'',
   qty2 :0,
   pr2 :0,
@@ -28,10 +28,10 @@ class App extends Component {
   des6 :'',
   qty6 :0,
   pr6 :0,
-
+  discount:100
   
 }
-handleChange = ({ target: { value, invoiceNo }}) => this.setState({ [invoiceNo]: value })
+handleChange = ({ target: { value, invoiceNo }}) => this.setState({ [invoiceNo]: value });
 
 createAndDownloadPdf = () => {
   axios.post('/create-pdf', this.state)
@@ -59,7 +59,7 @@ render() {
         D'Front Creations Invoice Genarator
       </Navbar.Brand>
     </Navbar>
-    <div>
+  
     <InputGroup className="mb-3">
       <InputGroup.Prepend>
         <InputGroup.Text id="basic-addon1">#</InputGroup.Text>
@@ -68,7 +68,7 @@ render() {
         placeholder="invoice no"
         name="invoiceNo"
         onChange={this.handleChange}
-        aria-label="invoice no"
+        aria-label="invoiceno"
         aria-describedby="basic-addon1"
         
       />
@@ -79,13 +79,13 @@ render() {
         placeholder="Customer Name"
         name="customerName"
         onChange={this.handleChange}
-        aria-label="Customer Name"
+        aria-label="CustomerName"
         aria-describedby="basic-addon2"
         
       />
     
     </InputGroup>
-    </div>
+
     <Form>
   <Form.Row>
     <Form.Group as={Col} controlId="formGridEmail">
@@ -168,6 +168,19 @@ render() {
       <Form.Control type="price" placeholder="Price" name="pr6"onChange={this.handleChange}/>
     </Form.Group>
   </Form.Row>
+  <InputGroup className="mb-3">
+      <InputGroup.Prepend>
+        <InputGroup.Text id="basic-addon1">Rs.</InputGroup.Text>
+      </InputGroup.Prepend>
+      <FormControl
+        placeholder="Discount"
+        name="discount"
+        onChange={this.handleChange}
+        aria-label="discount"
+        aria-describedby="basic-addon1"
+        
+      />
+    </InputGroup>
 
 
   <Button variant="primary" type="submit"onClick={this.createAndDownloadPdf}>
