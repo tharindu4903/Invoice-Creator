@@ -87,6 +87,9 @@ return `
            margin: 4px;
            text-align: right;
         }
+        .hide{
+         display: none;
+        }
 
          @media only screen and (max-width: 600px) {
          .invoice-box table tr.top table td {
@@ -109,6 +112,7 @@ return `
         <p style="text-align: right: ;">${invoiceNo}</p>
         <p style="text-align: right: ;">${`${today.getDate()}. ${today.getMonth() + 1}. ${today.getFullYear()}.`}</p>
      </div>
+     <div>
          <table align="center" >
             <tr>
                <td width=50%>${des1}</td>
@@ -116,7 +120,7 @@ return `
                <td width=45px style="text-align:center ;">${qty1}</td>
                <td width=48px style="text-align:right ;">${tot1}</td>
             </tr>
-            <tr>
+            <tr class="hide">
               <td width=50% >${des2}</td>
               <td width=48px>${pr2}</td>
               <td width=45px style="text-align:center ;">${qty2}</td>
@@ -148,6 +152,7 @@ return `
            </tr>
            
          </table>
+         </div>
          <div class="price">
            <p style="text-align: right ;">Rs. ${total}</p>
            <p style="text-align: right ;">Rs. ${discount}</p>

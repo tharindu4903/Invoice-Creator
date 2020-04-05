@@ -10,39 +10,43 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      invoiceNo: 1000001,
-      customerName: 'Tharindu',
-      des1: 'hello world',
-      qty1: 10,
-      pr1: 100,
-      tot1: 0,
-      des2: '',
-      qty2: 0,
-      pr2: 0,
-      tot2: 0,
-      des3: '',
-      qty3: 0,
-      pr3: 0,
-      tot3: 0,
-      des4: '',
-      qty4: 0,
-      pr4: 0,
-      tot4: 0,
-      des5: '',
-      qty5: 0,
-      pr5: 0,
-      tot5: 0,
-      des6: '',
-      qty6: 0,
-      pr6: 0,
-      tot6: 0,
-      subTot: 0,
-      discount: 100,
-      total: 0
-    }
-  }
-    handleChange = ({ target: { value, invoiceNo } }) => this.setState({ [invoiceNo]: value });
+                  invoiceNo: '',
+                  customerName: '',
+                  des1: '',
+                  qty1: 10,
+                  pr1: 100,
+                  tot1: 0,
+                  des2: '',
+                  qty2: 0,
+                  pr2: 0,
+                  tot2: 0,
+                  des3: '',
+                  qty3: 0,
+                  pr3: 0,
+                  tot3: 0,
+                  des4: '',
+                  qty4: 0,
+                  pr4: 0,
+                  tot4: 0,
+                  des5: '',
+                  qty5: 0,
+                  pr5: 0,
+                  tot5: 0,
+                  des6: '',
+                  qty6: 0,
+                  pr6: 0,
+                  tot6: 0,
+                  subTot: 0,
+                  discount: 100,
+                  total: 0,
+                  
+                }
+   }
    
+   handleChange = (event) => {
+    const { target: { name, value } } = event
+    this.setState({ [name]: value })
+  }
     
     tot1 = () => this.state.pr1 * this.state.qty1;
     tot1=this.tot1;
@@ -70,7 +74,7 @@ class App extends Component {
         })
     }
 
-
+  
     render() {
       return (
         <div >
@@ -94,7 +98,8 @@ class App extends Component {
             <FormControl
               placeholder="invoice no"
               name="invoiceNo"
-              onChange={this.handleChange}
+              value={this.state.name}
+              onChange={this.handleChange} 
               aria-label="invoiceno"
               aria-describedby="basic-addon1"
 
@@ -105,7 +110,8 @@ class App extends Component {
             <FormControl
               placeholder="Customer Name"
               name="customerName"
-              onChange={this.handleChange}
+              value={this.state.name}
+              onChange={this.handleChange} 
               aria-label="CustomerName"
               aria-describedby="basic-addon2"
 
@@ -117,7 +123,8 @@ class App extends Component {
             <Form.Row>
               <Form.Group as={Col} controlId="formGridEmail">
                 <Form.Label>Description</Form.Label>
-                <Form.Control type="description" placeholder="Description" name="des1" onChange={this.handleChange} />
+                <Form.Control type="description" placeholder="Description" name="des1" value={this.state.name}
+              onChange={this.handleChange}  />
               </Form.Group>
 
               <Form.Group as={Col} controlId="formGridPassword">
@@ -218,5 +225,7 @@ class App extends Component {
 
       );
     }
+    
   }
+
   export default App;
