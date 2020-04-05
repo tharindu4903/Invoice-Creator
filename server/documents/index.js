@@ -1,5 +1,5 @@
 
-module.exports = ({ invoiceNo,customerName ,des1 ,qty1 ,pr1 ,des2 ,qty2 ,pr2 ,des3 ,qty3 ,pr3 ,des4 ,qty4 ,pr4 ,des5 ,qty5 ,pr5 ,des6 ,qty6 ,pr6 ,discount}) => {
+module.exports = ({ invoiceNo,customerName ,des1 ,qty1 ,pr1,tot1 ,des2 ,qty2 ,pr2,tot2 ,des3 ,qty3 ,pr3,tot3 ,des4 ,qty4 ,pr4 ,tot4,des5 ,qty5 ,pr5,tot5 ,des6 ,qty6 ,pr6 ,tot6,discount,total}) => {
     const today = new Date();
 return `
 <!doctype html>
@@ -114,46 +114,46 @@ return `
                <td width=50%>${des1}</td>
                <td width=48px >${pr1}</td>
                <td width=45px style="text-align:center ;">${qty1}</td>
-               <td width=48px style="text-align:right ;">Rs. ${parseInt(pr1) * parseInt(qty1)}</td>
+               <td width=48px style="text-align:right ;">${tot1}</td>
             </tr>
             <tr>
               <td width=50% >${des2}</td>
               <td width=48px>${pr2}</td>
               <td width=45px style="text-align:center ;">${qty2}</td>
-              <td width=48px style="text-align:right ;">Rs. ${parseInt(pr2) * parseInt(qty2)}</td>
+              <td width=48px style="text-align:right ;">${tot2}</td>
            </tr>
            <tr>
               <td width=50%>${des3}</td>
               <td width=48px>${pr3}</td>
               <td width=45px style="text-align:center ;">${qty3}</td>
-              <td width=48px style="text-align:right ;">Rs. ${parseInt(pr3) * parseInt(qty3)}</td>
+              <td width=48px style="text-align:right ;">${tot3}</td>
            </tr>
            <tr>
               <td width=50%>${des4}</td>
               <td width=48px>${pr4}</td>
               <td width=45px style="text-align:center ;">${qty4}</td>
-              <td width=48px style="text-align:right ;">Rs. ${parseInt(pr4) * parseInt(qty4)}</td>
+              <td width=48px style="text-align:right ;">${tot4}</td>
            </tr>
            <tr>
               <td width=50%>${des5}</td>
               <td width=48px>${pr5}</td>
               <td width=45px style="text-align:center ;">${qty5}</td>
-              <td width=48px style="text-align:right ;">Rs. ${parseInt(pr5) * parseInt(qty5)}</td>
+              <td width=48px style="text-align:right ;">${tot5}</td>
            </tr>
            <tr>
               <td width=50%>${des6}</td>
               <td width=48px>${pr6}</td>
               <td width=45px style="text-align:center ;">${qty6}</td>
-              <td width=48px style="text-align:right ;">Rs. ${parseInt(pr6) * parseInt(qty6)}</td>
+              <td width=48px style="text-align:right ;"> ${tot6}</td>
            </tr>
            
          </table>
          <div class="price">
-           <p style="text-align: right ;">subtatal${qty1}</p>
+           <p style="text-align: right ;">Rs. ${total}</p>
            <p style="text-align: right ;">Rs. ${discount}</p>
         </div>
         <div class="fullAmount">
-           <p style="text-align: right ;">total${qty3}</p>
+           <p style="text-align: right ;">Rs. ${total-discount}</p>
         </div>
         <div class="to">
            <p style="text-align: left ;">${customerName}</p>
