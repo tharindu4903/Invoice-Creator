@@ -6,7 +6,6 @@ const cors = require('cors');
 const pdfTemplate = require('./documents');
 
 const app = express();
-
 const port = process.env.PORT || 5000;
 
 app.use(cors());
