@@ -3,7 +3,7 @@ import { Navbar, InputGroup, FormControl, Form, Button, Col } from 'react-bootst
 import './index.css';
 import logo from "./13.png";
 import axios from 'axios';
-import fileserver  from 'file-saver';
+import {saveAs}  from 'file-saver';
 
 
 class App extends Component {
@@ -68,22 +68,12 @@ class App extends Component {
   }
   createAndDownloadPdf = () => {
     axios.post('/create-pdf', this.state)
-      .then(() => 
-      axios.get('/fetchpdf', {
-        responseType: 'blob',
-        headers: {
-          'Accept': 'application/pdf'
-        }
-  }))
-  .then(response => {
-    // response.data is an empty object
-    const blob = new Blob([response.data], {
-      type: 'application/pdf',
-    });
-   fileserver.saveAs(blob, 'file.pdf');
+      .then(() => axios.get('fetchpdf', { responseType: 'blob' }))
+      .then((res) => {
+        const pdfBlob = new Blob([res.data], { type: 'application/pdf' });
+
+        saveAs(pdfBlob, 'newPdf.pdf');
       })
-
-
   }
 
 
