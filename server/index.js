@@ -6,6 +6,7 @@ const cors = require('cors');
 const pdfTemplate = require('./documents');
 
 const app = express();
+
 const port = process.env.PORT || 5000;
 
 app.use(cors());
@@ -22,8 +23,8 @@ app.post('/create-pdf', (req, res) => {
     });
 });
 
-app.get('/fetch-pdf', (req, res) => {
+app.get('/fetchpdf', function (req, res) {
     res.sendFile(`${__dirname}/result.pdf`)
-})
+  })
 
 app.listen(port, () => console.log(`Listening on port ${port}`));

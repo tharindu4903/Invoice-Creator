@@ -5,7 +5,7 @@ module.exports = ({ invoiceNo,customerName ,des1 ,qty1 ,pr1,tot1 ,des2 ,qty2 ,pr
        tot2=tot2;
     } else 
        tot2='';
-      
+     
        if (tot3===0) {
           tot3="";
        } else 
