@@ -33,9 +33,9 @@ module.exports = ({ invoiceNo, customerName, des1, qty1, pr1, tot1, des2, qty2, 
       <title>D'Front Creations</title>
       <style>
       .frame {
-         height: 1100px;
-         width: 500px;
-         max-width: 750px;
+         height: 800px;
+         width: 350px;
+         max-width: 350px;
          margin: auto;
          
          background-image: url("https://github.com/tharindu4903/Invoice-Creator/blob/master/server/documents/invoice%20temp-min.jpg?raw=true");
@@ -48,9 +48,9 @@ module.exports = ({ invoiceNo, customerName, des1, qty1, pr1, tot1, des2, qty2, 
       .invoice-box {
          position: relative;
         
-         width: 500px;
-         height: 1100px;
-         max-width: 750px;
+         width: 350px;
+         height: 800px;
+         max-width: 350px;
         
          box-shadow: 0 0 10px rgba(0, 0, 0, .15);
          font-size: 16px;
