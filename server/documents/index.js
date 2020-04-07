@@ -38,7 +38,7 @@ module.exports = ({ invoiceNo, customerName, des1, qty1, pr1, tot1, des2, qty2, 
          max-width: 750px;
          margin: auto;
          
-      //  background-image: url("https://github.com/tharindu4903/Invoice-Creator/blob/master/server/documents/invoice%20temp-min.jpg?raw=true");
+       background-image: url("https://github.com/tharindu4903/Invoice-Creator/blob/master/server/documents/invoice%20temp-min.jpg?raw=true");
          background-repeat: no-repeat;
          background-position: center;
          background-size: 775px 1100px;
