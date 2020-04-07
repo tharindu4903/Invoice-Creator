@@ -33,9 +33,9 @@ module.exports = ({ invoiceNo, customerName, des1, qty1, pr1, tot1, des2, qty2, 
       <title>D'Front Creations</title>
       <style>
       .resize{
-         width:50%;
-         height:50%;
-         possition:center;
+         width:30%;
+         height:30%;
+         
 
       }
       .frame {
