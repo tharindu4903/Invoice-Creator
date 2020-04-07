@@ -9,7 +9,7 @@
     "server": "nodemon server",
     "start":"node server",
     "heroku-postbuild": "cd client && npm install && npm run build"
-
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tharindu4903/Invoice-Creator.git"
