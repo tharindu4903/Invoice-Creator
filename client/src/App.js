@@ -4,6 +4,7 @@ import './index.css';
 import logo from "./13.png";
 import axios from 'axios';
 import {saveAs}  from 'file-saver';
+var Blob = require('blob');
 
 
 class App extends Component {
@@ -66,16 +67,27 @@ class App extends Component {
     this.calculation()
 
   }
-  createAndDownloadPdf = () => {
+  create = () => {
     axios.post('/create-pdf', this.state)
-      .then(() => axios.get('fetch-pdf', { responseType: 'blob' }))
-      .then((res) => {
-        const pdfBlob = new Blob([res.data], { type: 'application/pdf' });
-
-        saveAs(pdfBlob, 'newPdf.pdf');
-      })
   }
+ download =()=>{
+  axios.get('fetch-pdf', { responseType: 'blob' })
+  .then((res) => {
+    const pdfBlob = new Blob([res.data], { type: 'application/pdf' });
 
+    saveAs(pdfBlob, 'newPdf.pdf');
+  })
+
+ }
+ createAndDownloadPdf = () => {
+  axios.post('/create-pdf', this.state)
+    .then(() => axios.get('/fetch-pdf', { responseType: 'blob' }))
+    .then((res) => {
+      const pdfBlob = new Blob([res.data], { type: 'application/pdf' });
+
+      saveAs(pdfBlob, 'newPdf.pdf');
+    })
+}
 
 
   render() {
