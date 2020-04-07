@@ -143,6 +143,7 @@ module.exports = ({ invoiceNo, customerName, des1, qty1, pr1, tot1, des2, qty2, 
    </style>
    </head>
    <body>
+   <div class="resize">
       <div class="frame">
       <div class="invoice-box">
        <div class="details">
@@ -202,6 +203,7 @@ module.exports = ({ invoiceNo, customerName, des1, qty1, pr1, tot1, des2, qty2, 
         </div>
          
       </div>
+     </div>
      </div>
    </body>
 </html>
