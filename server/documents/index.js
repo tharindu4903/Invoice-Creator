@@ -34,7 +34,7 @@ module.exports = ({ invoiceNo, customerName, des1, qty1, pr1, tot1, des2, qty2, 
       <style>
       .frame {
          height: 1100px;
-         width: 750px;
+         width: 500px;
          max-width: 750px;
          margin: auto;
          
@@ -48,7 +48,7 @@ module.exports = ({ invoiceNo, customerName, des1, qty1, pr1, tot1, des2, qty2, 
       .invoice-box {
          position: relative;
         
-         width: 750px;
+         width: 500px;
          height: 1100px;
          max-width: 750px;
         
