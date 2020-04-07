@@ -38,7 +38,7 @@ return `
          max-width: 750px;
          margin: auto;
          
-         background-image: url("https://github.com/tharindu4903/invoice/blob/master/invoice%20temp.jpg?raw=true");
+        background-image: url("../invoice temp-min.jpg");
          background-repeat: no-repeat;
          background-position: center;
          background-size: cover;

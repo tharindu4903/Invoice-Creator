@@ -37,7 +37,7 @@ class App extends Component {
       pr6: '',
       tot6: '',
       total: '',
-      discount: '',
+      discount: 0,
 
 
     }
@@ -68,7 +68,7 @@ class App extends Component {
   }
   createAndDownloadPdf = () => {
     axios.post('/create-pdf', this.state)
-      .then(() => axios.get('fetchpdf', { responseType: 'blob' }))
+      .then(() => axios.get('fetch-pdf', { responseType: 'blob' }))
       .then((res) => {
         const pdfBlob = new Blob([res.data], { type: 'application/pdf' });
 
@@ -124,100 +124,100 @@ class App extends Component {
 
         <Form>
           <Form.Row>
-            <Form.Group as={Col} controlId="formGridEmail">
+            <Form.Group as={Col} >
               <Form.Label>Description</Form.Label>
               <Form.Control type="description" placeholder="Description" name="des1" value={this.state.name}
                 onChange={this.all} />
             </Form.Group>
 
-            <Form.Group as={Col} controlId="formGridPassword">
+            <Form.Group as={Col} >
               <Form.Label>Quntity</Form.Label>
               <Form.Control type="quntity" placeholder="Quntity" name="qty1" value={this.state.name}
                 onChange={this.all} />
             </Form.Group>
 
-            <Form.Group as={Col} controlId="formGridPassword">
+            <Form.Group as={Col} >
               <Form.Label>Price</Form.Label>
               <Form.Control type="price" placeholder="Price" name="pr1" value={this.state.name}
                 onChange={this.all} />
             </Form.Group>
           </Form.Row>
           <Form.Row>
-            <Form.Group as={Col} controlId="formGridEmail">
+            <Form.Group as={Col} >
               <Form.Control type="description" placeholder="Description" name="des2" value={this.state.name}
                 onChange={this.all} />
             </Form.Group>
 
-            <Form.Group as={Col} controlId="formGridPassword">
+            <Form.Group as={Col} >
               <Form.Control type="quntity" placeholder="Quntity" name="qty2" value={this.state.name}
                 onChange={this.all} />
             </Form.Group>
 
-            <Form.Group as={Col} controlId="formGridPassword">
+            <Form.Group as={Col}>
               <Form.Control type="price" placeholder="Price" name="pr2" value={this.state.name}
                 onChange={this.all} />
             </Form.Group>
           </Form.Row>
           <Form.Row>
-            <Form.Group as={Col} controlId="formGridEmail">
+            <Form.Group as={Col} >
               <Form.Control type="description" placeholder="Description" name="des3" value={this.state.name}
                 onChange={this.all} />
             </Form.Group>
 
-            <Form.Group as={Col} controlId="formGridPassword">
+            <Form.Group as={Col} >
               <Form.Control type="quntity" placeholder="Quntity" name="qty3" value={this.state.name}
                 onChange={this.all} />
             </Form.Group>
 
-            <Form.Group as={Col} controlId="formGridPassword">
+            <Form.Group as={Col} >
               <Form.Control type="price" placeholder="Price" name="pr3" value={this.state.name}
                 onChange={this.all} />
             </Form.Group>
           </Form.Row>
           <Form.Row>
-            <Form.Group as={Col} controlId="formGridEmail">
+            <Form.Group as={Col}>
               <Form.Control type="description" placeholder="Description" name="des4" value={this.state.name}
                 onChange={this.all} />
             </Form.Group>
 
-            <Form.Group as={Col} controlId="formGridPassword">
+            <Form.Group as={Col} >
               <Form.Control type="quntity" placeholder="Quntity" name="qty4" value={this.state.name}
                 onChange={this.all} />
             </Form.Group>
 
-            <Form.Group as={Col} controlId="formGridPassword">
+            <Form.Group as={Col} >
               <Form.Control type="price" placeholder="Price" name="pr4" value={this.state.name}
                 onChange={this.all} />
             </Form.Group>
           </Form.Row>
           <Form.Row>
-            <Form.Group as={Col} controlId="formGridEmail">
+            <Form.Group as={Col} >
               <Form.Control type="description" placeholder="Description" name="des5" value={this.state.name}
                 onChange={this.all} />
             </Form.Group>
 
-            <Form.Group as={Col} controlId="formGridPassword">
+            <Form.Group as={Col} >
               <Form.Control type="quntity" placeholder="Quntity" name="qty5" value={this.state.name}
                 onChange={this.all} />
             </Form.Group>
 
-            <Form.Group as={Col} controlId="formGridPassword">
+            <Form.Group as={Col} >
               <Form.Control type="price" placeholder="Price" name="pr5" value={this.state.name}
                 onChange={this.all} />
             </Form.Group>
           </Form.Row>
           <Form.Row>
-            <Form.Group as={Col} controlId="formGridEmail">
+            <Form.Group as={Col} >
               <Form.Control type="description" placeholder="Description" name="des6" value={this.state.name}
                 onChange={this.all} />
             </Form.Group>
 
-            <Form.Group as={Col} controlId="formGridPassword">
+            <Form.Group as={Col} >
               <Form.Control type="quntity" placeholder="Quntity" name="qty6" value={this.state.name}
                 onChange={this.all} />
             </Form.Group>
 
-            <Form.Group as={Col} controlId="formGridPassword">
+            <Form.Group as={Col} >
               <Form.Control type="price" placeholder="Price" name="pr6" value={this.state.name}
                 onChange={this.all} />
             </Form.Group>
