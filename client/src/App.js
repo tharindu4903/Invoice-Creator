@@ -71,8 +71,8 @@ class App extends Component {
 
 
   createAndDownloadPdf = () => {
-    axios.post('/create-pdf', this.state)
-      .then(() => axios.get('/fetch-pdf', { responseType: 'blob' }))
+    axios.post('https://dfront-invoice.herokuapp.com/create-pdf', this.state)
+      .then(() => axios.get('https://dfront-invoice.herokuapp.com/fetch-pdf', { responseType: 'blob' }))
       .then((res) => {
         const pdfBlob = new Blob([res.data], { type: 'application/pdf' });
 
