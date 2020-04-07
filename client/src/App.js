@@ -3,8 +3,9 @@ import { Navbar, InputGroup, FormControl, Form, Button, Col } from 'react-bootst
 import './index.css';
 import logo from "./13.png";
 import axios from 'axios';
-import {saveAs}  from 'file-saver';
-var Blob = require('blob');
+import { saveAs } from 'file-saver';
+
+
 
 
 class App extends Component {
@@ -12,7 +13,7 @@ class App extends Component {
     super();
     this.state = {
       invoiceNo: 1000000,
-      customerName: '',
+      customerName: 'unknown',
       des1: '',
       qty1: '',
       pr1: '',
@@ -67,27 +68,20 @@ class App extends Component {
     this.calculation()
 
   }
-  create = () => {
+
+
+  createAndDownloadPdf = () => {
     axios.post('/create-pdf', this.state)
+      .then(() => axios.get('/fetch-pdf', { responseType: 'blob' }))
+      .then((res) => {
+        const pdfBlob = new Blob([res.data], { type: 'application/pdf' });
+
+
+
+        saveAs(pdfBlob, this.state.customerName + '.pdf');
+      })
+
   }
- download =()=>{
-  axios.get('fetch-pdf', { responseType: 'blob' })
-  .then((res) => {
-    const pdfBlob = new Blob([res.data], { type: 'application/pdf' });
-
-    saveAs(pdfBlob, 'newPdf.pdf');
-  })
-
- }
- createAndDownloadPdf = () => {
-  axios.post('/create-pdf', this.state)
-    .then(() => axios.get('/fetch-pdf', { responseType: 'blob' }))
-    .then((res) => {
-      const pdfBlob = new Blob([res.data], { type: 'application/pdf' });
-
-      saveAs(pdfBlob, 'newPdf.pdf');
-    })
-}
 
 
   render() {
@@ -250,9 +244,10 @@ class App extends Component {
           </InputGroup>
 
 
-          <Button variant="primary" type="submit" onClick={this.createAndDownloadPdf} >
+          <Button variant="primary" onClick={this.createAndDownloadPdf} >
             Create Invoice
             </Button>
+
         </Form>
       </div>
 

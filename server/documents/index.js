@@ -1,31 +1,31 @@
 
-module.exports = ({ invoiceNo,customerName ,des1 ,qty1 ,pr1,tot1 ,des2 ,qty2 ,pr2,tot2 ,des3 ,qty3 ,pr3,tot3 ,des4 ,qty4 ,pr4 ,tot4,des5 ,qty5 ,pr5,tot5 ,des6 ,qty6 ,pr6 ,tot6,total,discount}) => {
-    const today = new Date();
-   if (tot2!=0) {
-       tot2=tot2;
-    } else 
-       tot2='';
-     
-       if (tot3===0) {
-          tot3="";
-       } else 
-          tot3=tot3;
-          if (tot4===0) {
-            tot4="";
-         } else 
-            tot4=tot4;
-            if (tot5===0) {
-               tot5="";
-            } else 
-               tot5=tot5;
-               if (tot6===0) {
-                  tot6="";
-               } else 
-                  tot6=tot6;
-                   
+module.exports = ({ invoiceNo, customerName, des1, qty1, pr1, tot1, des2, qty2, pr2, tot2, des3, qty3, pr3, tot3, des4, qty4, pr4, tot4, des5, qty5, pr5, tot5, des6, qty6, pr6, tot6, total, discount }) => {
+   const today = new Date();
+   if (tot2 != 0) {
+      tot2 = tot2;
+   } else
+      tot2 = '';
 
-    
-return `
+   if (tot3 === 0) {
+      tot3 = "";
+   } else
+      tot3 = tot3;
+   if (tot4 === 0) {
+      tot4 = "";
+   } else
+      tot4 = tot4;
+   if (tot5 === 0) {
+      tot5 = "";
+   } else
+      tot5 = tot5;
+   if (tot6 === 0) {
+      tot6 = "";
+   } else
+      tot6 = tot6;
+
+
+
+   return `
 <!doctype html>
 <html>
    <head>
@@ -195,7 +195,7 @@ return `
            <p style="text-align: right ;">Rs. ${discount}</p>
         </div>
         <div class="fullAmount">
-           <p style="text-align: right ;">Rs. ${total-discount}</p>
+           <p style="text-align: right ;">Rs. ${total - discount}</p>
         </div>
         <div class="to">
            <p style="text-align: left ;">${customerName}</p>
