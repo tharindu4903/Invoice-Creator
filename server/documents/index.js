@@ -32,28 +32,29 @@ module.exports = ({ invoiceNo, customerName, des1, qty1, pr1, tot1, des2, qty2, 
       <meta charset="utf-8">
       <title>D'Front Creations</title>
       <style>
+ 
       .frame {
-         height: 700px;
-         width: 500px;
-         max-width: 500px;
+         height: 750px;
+         width: 550px;
+         max-width: 550px;
          margin: auto;
          
          background-image: url("https://github.com/tharindu4903/Invoice-Creator/blob/master/server/documents/invoice%20temp-min.jpg?raw=true");
          background-repeat: no-repeat;
          background-position: center;
-         background-size: 520px 750px;
+         background-size: 550px 750px;
 
       }
 
       .invoice-box {
          position: relative;
         
-         width: 500px;
-         height: 700px;
-         max-width: 500px;
+         width: 550px;
+         height: 750px;
+         max-width: 550px;
         
          box-shadow: 0 0 10px rgba(0, 0, 0, .15);
-         font-size: 11px;
+         font-size: 9px;
          line-height: 24px;
          font-family: 'Helvetica Neue', 'Helvetica';
          color: #555;
@@ -65,10 +66,10 @@ module.exports = ({ invoiceNo, customerName, des1, qty1, pr1, tot1, des2, qty2, 
 
       table {
          position: relative;
-         top: 223px;
+         top: 250px;
          left: -4px;
          border-collapse: collapse;
-         width: 85%;
+         width: 83%;
          
       }
 
@@ -79,32 +80,32 @@ module.exports = ({ invoiceNo, customerName, des1, qty1, pr1, tot1, des2, qty2, 
 
       .details {
          position: relative;
-         top: 148px;
-         left: 348px;
+         top: 173px;
+         left: 379px;
 
       }
 
       .details p {
          
-         height: 4.5px;
+         height: 5px;
 
       }
 
       .price {
          position: relative;
-         top: 129px;
-         right: 45px;
+         top: 159px;
+         right: 55px;
       }
 
       .price p {
-         height: 7px;
+         height: 8.5px;
          text-align: right;
       }
 
       .fullAmount {
          position: relative;
-         top: 145px;
-         right: 42px;
+         top: 175px;
+         right: 53px;
       }
 
       .fullAmount p {
@@ -114,8 +115,8 @@ module.exports = ({ invoiceNo, customerName, des1, qty1, pr1, tot1, des2, qty2, 
 
       .to {
          position: relative;
-         top: 85px;
-         left: 43px;
+         top: 110px;
+         left: 56px;
       }
 
       .to p {
