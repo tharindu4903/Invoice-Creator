@@ -4,7 +4,7 @@
   "private": true,
   "proxy": "https://dfront-invoice.herokuapp.com/",
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "blob": "^0.1.0",
     "file-saver": "^2.0.0",
     "firebase-tools": "^8.0.2",
