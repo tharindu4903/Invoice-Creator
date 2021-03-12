@@ -9,7 +9,7 @@
     "file-saver": "^2.0.0",
     "firebase-tools": "^8.0.2",
     "js-file-download": "^0.4.11",
-    "jspdf": "^1.5.3",
+    "jspdf": "^2.3.1",
     "react": "^16.7.0",
     "react-bootstrap": "^1.0.0",
     "react-dom": "^16.7.0",
