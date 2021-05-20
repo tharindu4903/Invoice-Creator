@@ -32,7 +32,7 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "file-server": "^2.1.0",
-    "html-pdf": "^2.2.0",
+    "html-pdf": "^3.0.1",
     "minimist": "^1.2.5",
     "phantomjs": "^2.1.7",
     "react-bootstrap": "^1.0.0",
