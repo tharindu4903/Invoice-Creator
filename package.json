@@ -30,7 +30,7 @@
     "bootstrap": "^4.4.1",
     "cookie-parser": "^1.4.5",
     "cors": "^2.8.5",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "file-server": "^2.1.0",
     "html-pdf": "^2.2.0",
     "minimist": "^1.2.5",
